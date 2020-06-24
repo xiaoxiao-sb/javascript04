@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			/*
+			 * 构造函数方式:相当于创建一种类型(class)
+			 * var jay = new Person('周杰伦',41,true);
+			 * 1.在内存中开辟一个空间
+			 * 2.this指向的是当前实例对象
+			 * 3.this点的方式给对象动态添加属性和方法
+			 * 4.不需要return,将当前的对象从构造函数中返回出去
+			 */
+			
+			
+			//构造函数  人类
+			function Person(name,age,gender) {
+				this.name = name;
+				//			jay.name ='老刘';
+				this.age = age;
+				this.gender = gender;
+				this.sing = function() {
+					alert('双节棍,呵呵哈哈');
+				}
+			}
+			
+			var jay = new Person('周杰伦',41,true);
+			console.log(jay);
+			var jolin = new Person('蔡依林',38,false);
+			console.log(jolin);
+			
+		</script>
+	</body>
+
+</html>

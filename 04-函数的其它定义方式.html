@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*
+			 * 函数:
+			 * 有名函数:命名函数,有函数名的函数
+			 * 定义方式:
+			 * 1.定义函数名的方式   function 函数名(){}
+			 * 2.函数表达式的方式   var sum = function(){},调用要在定义之后,否则会报错
+			 * 
+			 * 
+			 * 匿名函数:没有函数名的函数.  不能直接定义
+			 * 正确定义的几种方式:
+			 * 1.作为函数表达式的方式定义
+			 * 2.作为自调用函数的方式定义,自调用函数在定义的时候就立即调用,而且只能用一次
+			 * 3.作为参数传递
+			 * 4.作为事件处理函数
+			 * 5.作为返回值
+			 * 
+			 * 
+			 */
+			// 定义函数名的方式
+			
+			//fn();
+			function fn(){
+				alert('定义函数名的方式');
+			}
+			
+			//sum();
+			//函数表达式方式
+			var sum = function (a,b){
+				//alert('函数表达式方式');
+				return a+b;
+			}
+//			sum();
+			console.log(sum(1,2));
+			console.log(fn);
+			
+			//错误的
+//			function(){
+//				
+//			}
+			(function(){
+				alert('函数自调用1');
+			})();
+			
+			(function(){
+				alert('函数自调用2');
+			})();
+		</script>
+	</body>
+</html>

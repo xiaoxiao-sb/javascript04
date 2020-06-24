@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			var jay = new Object();
+			jay.name = '周杰伦';
+			//			jay.name ='老刘';
+			jay.age = 41;
+			jay.gender = true;
+			jay.sing = function() {
+				alert('双节棍,呵呵哈哈');
+			}
+			
+			/*
+			 * 工厂方式:工厂模式是一种设计模式,前人总结一些高效的变成思想
+			 */
+			function createPerson(name,age,gender) {
+				var obj = new Object();
+				obj.name = name;
+				//			jay.name ='老刘';
+				obj.age = age;
+				obj.gender = gender;
+				obj.sing = function() {
+					alert('双节棍,呵呵哈哈');
+				}
+				return obj;
+			}
+			var jay = createPerson('周杰伦',41,true);
+			var jolin = createPerson('蔡依林',38,false);
+		console.log(jay);
+		console.log(jolin);
+		</script>
+	</body>
+
+</html>

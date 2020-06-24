@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			/* js预解析:js会预先将带var定义的变量将声明提升到全局作用域的顶端
+			 * 作用域: 变量的访问区域
+			 * 全局作用域: 在script中的位置就是全局作用域
+			 * 全局变量: 在全局作用域下,定义的变量和方法都是window对象下的属性或者方法
+			 * 
+			 * 全局变量的定义方式:
+			 * 1.带var定义变量的方式:将声明提升到全局作用域的顶端
+			 * 2.不带var定义变量的方式:必须是声明加赋值,否则会报错
+			 * 
+			 * 全局对象:浏览器顶级对象window
+			 * 
+			 * 函数作用域: 在函数体中用var声明的变量,从外界是无法访问的,在函数体内会优先访问
+			 * 可以称为是函数的私有变量,函数作用域中的局部变量.
+			 * 在函数作用域中当访问一个变量时,会先从当前的函数作用域中去寻找有没有用var声明的该
+			 * 变量,如果有就使用,如果没有,会去全局作用域中去寻找
+			 * 在函数作用域中,不带var的变量一定是全局的
+			 * 在函数作用域中,用var定义的变量会将声明提升到函数作用域的顶端
+			 * 
+			 * 
+			 */
+			//			var a = '哈哈';
+			//			console.log(window.a);
+			//			console.log(a);
+			//			var obj = new Object();
+			//			obj.name = '周杰伦';
+			//			console.log()
+			//			document.write();
+			//			window.alert('我是方法');
+			//			window.prompt('我也是方法');
+			//			function sum(a,b){
+			//				alert('你们猜,我是谁的');
+			//			}
+			//			window.sum();
+
+			//			console.log(a);
+			//			var a = '哈哈';
+			//console.log(a);
+			//			a = 5;	
+			//			console.log(window.a);
+
+			//			if(true){
+			//				var a = 5;
+			//			}
+			//			
+
+			//			console.log(a);
+			//			for (var i = 0; i < 5; i++) {
+			//				var a = '哈哈';
+			////				console.log(a);
+			////				console.log(i)
+			//			}
+			//			console.log(a);
+			//			console.log(i);
+
+			//			function sum(){
+			//				var a = '哈哈';
+			//			}
+			//			sum();
+			//			console.log(a);
+
+			//			var a = '哈哈';
+			//			function sum(){
+			//				var a = '呵呵';
+			//				console.log(a);
+			//			}
+			//			sum();
+			//			console.log(a);
+
+//			var a = '哈哈';
+//
+//			function sum() {
+//				 a = '呵呵';
+//			}
+//			sum();
+//			console.log(a);
+//			var a = '哈哈';
+//
+//			function sum() {
+//				var a = '呵呵';
+//			}
+//			sum();
+//			console.log(a);
+
+
+//			var a = '哈哈';
+//
+//			function sum() {
+//				
+//				console.log(a);
+//				var a = '呵呵';
+//			}
+//			sum();
+//			console.log(a);
+
+
+//			var a = '哈哈';
+//
+//			function sum() {
+//				
+//				console.log(a);//哈哈
+//				 a = '呵呵';
+//			}
+//			sum();
+//			console.log(a);//呵呵
+
+			var a = '哈哈';
+
+			function sum(a) {
+//				var a;
+				console.log(a);//undefined
+				 a = '呵呵';
+				
+			}
+			sum();
+			console.log(a);//哈哈
+		</script>
+	</body>
+
+</html>
